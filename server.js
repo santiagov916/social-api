@@ -11,7 +11,7 @@ app.use(express.static('public'));
 app.use(require('./routes'));
 
 mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/social-api', {
-    useNewParser: true,
+    useNewUrlParser: true,
     useUnifiedTopology: true
 });
 
