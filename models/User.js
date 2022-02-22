@@ -5,12 +5,14 @@ const UserSchema = new Schema({
     username: {
         type: String,
         trim: true,
-        required: true
+        required: true,
+        unique: true
     },
     email: {
         type: String,
         unique: true,
-        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Enter a valid email! Ex: test@test.com']
+        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Enter a valid email! Ex: test@test.com'],
+        required: true
     },
     createdAt: {
         type: Date,
@@ -42,10 +44,6 @@ const UserSchema = new Schema({
 UserSchema.virtual('friendCount').get(function() {
     return this.friends.length;
 });
-
-UserSchema.virtual('thoughtCount').get(function() {
-    return this.thoughts.length;
-})
 
 const User = model('User', UserSchema);
 
