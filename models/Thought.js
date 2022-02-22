@@ -34,7 +34,7 @@ const ThoughtSchema = new Schema({
         type: String,
         required: true,
         min: 1,
-        max: 35,
+        max: 100,
     },
     createdAt: {
         type: Date,
@@ -55,4 +55,5 @@ const ThoughtSchema = new Schema({
 });
 
 const Thought = model('Thought', ThoughtSchema);
+
 module.exports = Thought;
