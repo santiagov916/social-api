@@ -44,5 +44,5 @@
   ## Questions?
 
   ### Email the programmer: gme.santi24@yahoo.com
-  ### Video of the program in action: hhttps://watch.screencastify.com/v/2VL0T3rs0bSvJ2ANAWCd
+  ### Video of the program in action: https://watch.screencastify.com/v/2VL0T3rs0bSvJ2ANAWCd
 
